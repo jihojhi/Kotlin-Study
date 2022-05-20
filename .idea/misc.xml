@@ -4,7 +4,11 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Android_Project/IMBWORKS/app/src/main/res/layout/activity_main.xml" value="0.34629629629629627" />
+        <entry key="..\:/Android_Project/IMBWORKS/app/src/main/res/layout/app_bar_main.xml" value="0.1875" />
         <entry key="..\:/Android_Project/IMBWORKS/app/src/main/res/layout/content_main.xml" value="0.34629629629629627" />
+        <entry key="..\:/Android_Project/IMBWORKS/app/src/main/res/layout/fragment_gallery.xml" value="0.284375" />
+        <entry key="..\:/Android_Project/IMBWORKS/app/src/main/res/layout/item_test.xml" value="0.29791666666666666" />
+        <entry key="..\:/Android_Project/IMBWORKS/app/src/main/res/layout/list_item.xml" value="2.0428571428571427" />
         <entry key="..\:/Android_Project/IMBWORKS/app/src/main/res/menu/activity_main_drawer.xml" value="0.3605128205128205" />
         <entry key="..\:/Android_Project/IMBWORKS/app/src/main/res/menu/main.xml" value="0.34629629629629627" />
       </map>
