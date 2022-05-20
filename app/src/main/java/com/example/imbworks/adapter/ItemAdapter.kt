@@ -8,10 +8,9 @@ import android.widget.TextView
 import com.example.imbworks.R
 import androidx.recyclerview.widget.RecyclerView
 import com.example.imbworks.model.Affirmation
-import com.example.imbworks.ui.gallery.GalleryFragment
 
 class ItemAdapter(
-    private val context: GalleryFragment,
+    private val context: Context,
     private val dataset: List<Affirmation>
 ) : RecyclerView.Adapter<ItemAdapter.ItemViewHolder>() {
 
