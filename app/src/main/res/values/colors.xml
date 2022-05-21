@@ -12,5 +12,7 @@
     <color name="green_light">#bdf479</color>
     <color name="green_dark">#599015</color>
     <color name="green_gray">#DCDCDC</color>
+    <color name="green_dark_gray">#999</color>
+
 
 </resources>
