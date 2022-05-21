@@ -7,20 +7,16 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
-    <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_home">대시보드</string>
+    <string name="menu_gallery">직원목록</string>
+    <string name="menu_slideshow">직원관리</string>
 
     // List 요소 추가
-    <string name="affirmation1">I am strong.</string>
-    <string name="affirmation2">I believe in myself.</string>
-    <string name="affirmation3">Each day is a new opportunity to grow and be a better version of myself.</string>
-    <string name="affirmation4">Every challenge in my life is an opportunity to learn from.</string>
-    <string name="affirmation5">I have so much to be grateful for.</string>
-    <string name="affirmation6">Good things are always coming into my life.</string>
-    <string name="affirmation7">New opportunities await me at every turn.</string>
-    <string name="affirmation8">I have the courage to follow my heart.</string>
-    <string name="affirmation9">Things will unfold at precisely the right time.</string>
-    <string name="affirmation10">I will be present in all the moments that this day brings.</string>
+    <string name="affirmation1">경영지원 팀</string>
+    <string name="affirmation2">금융SI 팀</string>
+    <string name="affirmation3">금융SM 팀</string>
+    <string name="affirmation4">금융솔루션 팀</string>
+    <string name="affirmation5">베트남해외사업부</string>
+    <string name="affirmation6">연구소</string>
 
 </resources>
