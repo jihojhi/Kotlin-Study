@@ -1,11 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TextView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/border_textview"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/item_title"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="150sp"
-    android:gravity="center|start"
-    android:textSize="24sp"
-    tools:text="Employee List" />
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:id="@+id/item_image"
+            android:importantForAccessibility="no"
+            android:scaleType="centerCrop"/>
+        <TextView android:background="@drawable/border_textview"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/item_title"
+            android:layout_width="match_parent"
+            android:layout_height="150sp"
+            android:gravity="center|start"
+            android:textSize="24sp"
+            android:padding="16dp"
+            tools:text="Employee List" />
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>
