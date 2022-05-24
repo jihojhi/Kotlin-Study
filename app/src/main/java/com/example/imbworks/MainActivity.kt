@@ -1,6 +1,8 @@
 package com.example.imbworks
 
+import android.content.ContentValues.TAG
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import androidx.appcompat.app.AppCompatActivity
 import androidx.drawerlayout.widget.DrawerLayout
@@ -13,10 +15,14 @@ import com.example.imbworks.databinding.ActivityMainBinding
 import com.google.android.material.navigation.NavigationView
 import com.google.android.material.snackbar.Snackbar
 
+const val KEY_REVENUE = "revenue_key"
+const val KEY_DESSERT_SOLD = "dessert_sold_key"
+
 class MainActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,6 +48,14 @@ class MainActivity : AppCompatActivity() {
             ), drawerLayout
         )
 
+        if (savedInstanceState != null) {
+            val revenue = savedInstanceState.getInt(KEY_REVENUE, 0)
+            val dessertsSold = savedInstanceState.getInt(KEY_DESSERT_SOLD, 0)
+
+            Log.d(TAG, revenue.toString())
+            Log.d(TAG, dessertsSold.toString())
+        }
+
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
     }
@@ -55,5 +69,12 @@ class MainActivity : AppCompatActivity() {
     override fun onSupportNavigateUp(): Boolean {
         val navController = findNavController(R.id.nav_host_fragment_content_main)
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        Log.d(TAG, "onSaveInstanceState Called")
+        outState.putInt(KEY_REVENUE, 1)
+        outState.putInt(KEY_DESSERT_SOLD, 2)
     }
 }

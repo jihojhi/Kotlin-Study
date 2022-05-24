@@ -1,0 +1,47 @@
+package com.example.imbworks.ui.gallery
+
+import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.DividerItemDecoration
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.imbworks.adapter.DetailAdapter
+import com.example.imbworks.databinding.FragmentGalleryDetailBinding
+
+
+class DetailActivity : AppCompatActivity() {
+
+    // 싱글톤 패턴 적용
+    companion object{
+        const val LETTER = "letter"
+        // 구글 키워드 검색 : 암시적 인텐트
+        const val SEARCH_PREFIX = "https://www.google.com/search?q="
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        // Retrieve a binding object that allows you to refer to views by id name
+        // Names are converted from snake case to camel case.
+        // For example, a View with the id word_one is referenced as binding.wordOne
+        val binding = FragmentGalleryDetailBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        // Retrieve the LETTER from the Intent extras
+        // intent.extras.getString returns String? (String or null)
+        // so toString() guarantees that the value will be a String
+
+        //val letterId = "A"
+        val letterId = intent?.extras?.getString(LETTER).toString()
+
+        val recyclerView = binding.recyclerViewDetail
+        recyclerView.layoutManager = LinearLayoutManager(this)
+        recyclerView.adapter = DetailAdapter(letterId, this)
+
+        // Adds a [DividerItemDecoration] between items
+        recyclerView.addItemDecoration(
+            DividerItemDecoration(this, DividerItemDecoration.VERTICAL)
+        )
+
+        //title = getString(R.string.detail_prefix) + " " + letterId
+    }
+}

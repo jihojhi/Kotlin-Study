@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="words">
+        <item>about</item>
+        <item>acidic</item>
+        <item>acne</item>
+        <item>acrid</item>
+        <item>acute</item>
+        <item>alphabet</item>
+        <item>anchor</item>
+        <item>anecdote</item>
+        <item>animal</item>
+        <item>automobile</item>
+        <item>awesome</item>
+        <item>back</item>
+        <item>balloon</item>
+        <item>basket</item>
+        <item>bench</item>
+        <item>best</item>
+        <item>birthday</item>
+        <item>books</item>
+        <item>brief</item>
+        <item>business</item>
+        <item>buy</item>
+        <item>camera</item>
+        <item>catapult</item>
+        <item>center</item>
+        <item>children</item>
+        <item>city</item>
+        <item>class</item>
+        <item>click</item>
+        <item>coffee</item>
+        <item>comment</item>
+        <item>company</item>
+        <item>contact</item>
+        <item>copyright</item>
+        <item>creative</item>
+    </string-array>
+    <string-array name="employee">
+        <item>김효진</item>
+        <item>임연지</item>
+        <item>노연정</item>
+        <item>이승현</item>
+        <item>나우성</item>
+        <item>안유미</item>
+        <item>서지희</item>
+        <item>박민희</item>
+    </string-array>
+</resources>

@@ -1,14 +1,16 @@
 package com.example.imbworks.adapter
 
-import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.cardview.widget.CardView
 import com.example.imbworks.R
 import androidx.recyclerview.widget.RecyclerView
 import com.example.imbworks.model.Affirmation
+import com.example.imbworks.ui.gallery.DetailActivity
 import com.example.imbworks.ui.gallery.GalleryFragment
 
 class ItemAdapter(
@@ -16,9 +18,10 @@ class ItemAdapter(
     private val dataset: List<Affirmation>
 ) : RecyclerView.Adapter<ItemAdapter.ItemViewHolder>() {
 
-    class ItemViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
+    class ItemViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
         val textView: TextView = view.findViewById(R.id.item_title)
         val imageView: ImageView = view.findViewById(R.id.item_image)
+        val cardView: CardView = view.findViewById(R.id.item_card)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
@@ -43,7 +46,12 @@ class ItemAdapter(
         val item = dataset[position]
         holder.textView.text = context.resources.getString(item.stringResourceId)
         holder.imageView.setImageResource(item.imageResourceId)
-
+        holder.cardView.setOnClickListener {
+            val context = holder.view.context
+            val intent = Intent(context, DetailActivity::class.java)
+            intent.putExtra(DetailActivity.LETTER, holder.textView.text.toString())
+            context.startActivity(intent)
+        }
     }
 
 //    override fun getItemCount(): Int {
