@@ -4,6 +4,7 @@ import com.example.imbworks.R
 import com.example.imbworks.model.Affirmation
 
 class Datasource {
+
     fun loadAffirmations(): List<Affirmation> {
         return listOf<Affirmation>(
             Affirmation(R.string.affirmation1, R.drawable.image1),
@@ -14,4 +15,6 @@ class Datasource {
             Affirmation(R.string.affirmation6,R.drawable.image6)
         )
     }
+
+
 }
